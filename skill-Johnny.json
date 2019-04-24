@@ -1,0 +1,582 @@
+{
+  "name": "Johnny",
+  "intents": [
+    {
+      "intent": "greetings",
+      "examples": [
+        {
+          "text": "Thank you"
+        },
+        {
+          "text": "Welcome"
+        },
+        {
+          "text": "okay"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Good morning"
+        },
+        {
+          "text": "Good afternoon"
+        },
+        {
+          "text": "Good evening"
+        },
+        {
+          "text": "Good night"
+        },
+        {
+          "text": "Hi"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Location",
+      "examples": [
+        {
+          "text": "Funtopia Water Park"
+        },
+        {
+          "text": "Lagos"
+        },
+        {
+          "text": "Eleko Beach"
+        },
+        {
+          "text": "Tera Kulture"
+        }
+      ],
+      "description": "These are the safe areas one can visit in Nigeria at the moment"
+    },
+    {
+      "intent": "enquiries",
+      "examples": [
+        {
+          "text": "Budget Hotel"
+        },
+        {
+          "text": "Zoo"
+        },
+        {
+          "text": "Lakes"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "visit",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Lakes",
+          "synonyms": [
+            "Pond",
+            "Pool",
+            "Waterhole",
+            "Lagoon",
+            "creek"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Restaurants",
+          "synonyms": [
+            "cafeteria",
+            "diner",
+            "bar",
+            "coffee shop",
+            "joint"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Hotels",
+          "synonyms": [
+            "Inn",
+            "hostel",
+            "lodging",
+            "motel"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "WaterFalls",
+          "synonyms": [
+            "cascade",
+            "torrent",
+            "outpouring",
+            "white water",
+            "chute",
+            "falls",
+            "rapids",
+            "force",
+            "cataract"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Museum",
+          "synonyms": [
+            "art gallery",
+            "depository",
+            "vault",
+            "archives",
+            "zoological garden",
+            "botanical garden",
+            "picture gallery"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Resorts",
+          "synonyms": [
+            "holiday destination",
+            "retreat",
+            "spa"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "beach",
+          "synonyms": [
+            "seaside",
+            "coast",
+            "shore",
+            "foreshore",
+            "seashore"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "forest",
+          "synonyms": [
+            "plantation",
+            "jungle",
+            "woodland",
+            "holt",
+            "greenwood"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Funtopia",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Eleko Beach",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Terra Kulture",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "okay",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "yes",
+          "synonyms": [
+            "sure",
+            "yeah"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "business",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Incorporation",
+          "synonyms": [
+            "Sole Proprietorship",
+            "Partnership",
+            "Joint Venture",
+            "LLC"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Investment",
+          "synonyms": [
+            "Shares",
+            "Bonds",
+            "Treasury Bills",
+            "Properties",
+            "Fundraising",
+            "Startup"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-07-10"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eleko beach is a quiet, relaxing beach far removed from the hustle and bustle of Lagos. It offers a wide range of sporting activities to visitors. Everyone is invited whether you are here to converse with nature or to put your foot prints in the sands eternal"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1555075705899",
+      "metadata": {},
+      "conditions": "@visit:(Eleko Beach)",
+      "dialog_node": "node_6_1555075759774"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Terra Kulture Arts and Studios Limited (formerly Terra Kulture Limited – The Nigerian Cultural Centre) is an educational and recreational organization set up in 2003 to promote the richness and diversity of Nigerian languages, arts and culture. <a href=\"https://www.google.com/maps/place/Terra+Kulture,+Victoria+Island+Lagos/@6.4251026,3.4246474,17z/data=!3m1!4b1!4m5!3m4!1s0x103bf5312334a98f:0x3c77a3b287836483!8m2!3d6.4251026!4d3.4268361\"target=\"_blank\">View More</a>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_14_1555073085278",
+      "metadata": {},
+      "conditions": "@visit:(Terra Kulture)",
+      "dialog_node": "node_15_1555073332358",
+      "previous_sibling": "node_3_1555075303013"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "Book Now",
+            "options": [],
+            "description": "<!DOCTYPE html> <html> <body>  <button onclick=\"visitPage();\">Book Now</button>  <script>     function visitPage(){         window.location='https://terrakulture.com/tickets/';     } </script>  </body> </html>",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_14_1555073085278",
+      "metadata": {},
+      "conditions": "@visit:yes",
+      "dialog_node": "node_2_1555076789509",
+      "previous_sibling": "node_15_1555073332358"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Would you like to book a visit?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_14_1555073085278",
+      "metadata": {},
+      "conditions": "@visit:okay",
+      "dialog_node": "node_3_1555075303013"
+    },
+    {
+      "type": "standard",
+      "output": {},
+      "parent": "node_3_1555075303013",
+      "metadata": {},
+      "dialog_node": "node_2_1555086946360",
+      "previous_sibling": "node_4_1555075498798"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "Book",
+            "options": [],
+            "description": "<!DOCTYPE html> <html> <body>  <button onclick=\"visitPage();\">Book Now</button>  <script>     function visitPage(){         window.location='https://terrakulture.com/tickets/';     } </script>  </body> </html>",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_3_1555075303013",
+      "metadata": {},
+      "conditions": "@visit:yes",
+      "dialog_node": "node_4_1555075498798"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We have Eleko Beach, Funtopia Water Park, Tura Kulture"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Which one will you like to visit?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1555065034913",
+      "metadata": {},
+      "conditions": "@Location:Lagos",
+      "dialog_node": "node_3_1555069343408",
+      "previous_sibling": "node_2_1555068876906"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1555065034913",
+      "metadata": {},
+      "conditions": "#enquiries",
+      "dialog_node": "node_2_1555068876906"
+    },
+    {
+      "type": "standard",
+      "title": "Enquiries",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Where exactly would you like to visit?"
+              },
+              {
+                "text": "Will you like to know the budget of a 5star, 4star or just a small hotel?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Will you like to know the budget of a 5star, 4star or just a small hotel?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#enquiries",
+      "dialog_node": "node_1_1555065034913",
+      "previous_sibling": "node_5_1555075705899"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Where will you like to visit?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "These are the places you can visit in Lagos"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Funtopia water park"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Eleko Beach"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Terra Kulture"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#greetings",
+      "dialog_node": "node_11_1555071854695",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Location Eleko",
+      "output": {},
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Location",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_5_1555075705899",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_14_1555073085278"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_1_1555065034913"
+    },
+    {
+      "type": "standard",
+      "title": "Location Terra Kulture",
+      "output": {},
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Location",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_14_1555073085278",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_11_1555071854695"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello!"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "I am here to take you around Lagos, Nigeria"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "workspace_id": "c69a6781-73d0-49fe-9147-40338c3a06f8",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
